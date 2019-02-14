@@ -1,0 +1,36 @@
+{
+  "name": "fileapp",
+  "version": "1.0.0",
+  "description": "Simple App that helps replace text and generate multiple files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www",
+    "crawl": "node util/crawl",
+    "prestart": "nohup node taskmanager/taskRunner.js & nohup node taskmanager/worker.js &",
+    "format": "prettier --write \"output/**/*.php\" --parser html"
+  },
+  "keywords": [
+    "Text",
+    "replacement"
+  ],
+  "author": "jugba",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.1",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "debug": "^4.0.1",
+    "express": "^4.16.3",
+    "kue": "git+https://github.com/andela-jugba/kue.git",
+    "moment": "^2.22.2",
+    "mongoose": "^5.3.2",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.0",
+    "nodemon": "^1.18.4",
+    "phantomjs": "^2.1.7",
+    "prettier": "^1.16.1",
+    "pug": "^2.0.3",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}

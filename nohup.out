@@ -1,0 +1,343 @@
+Starting Abbotsford NSW
+{ NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:169:7) name: 'NoSuchSessionError', remoteStacktrace: '' }
+{ NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:169:7) name: 'NoSuchSessionError', remoteStacktrace: '' }
+Starting Abbotsford NSW
+Creating subtitute and write event for: Belrose NSW
+Starting Belrose NSW
+Starting Belrose NSW
+Starting Belrose NSW
+Starting Belrose NSW
+UI started on port 3002
+Creating subtitute and write event for: Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Finished activity log jobs: Sydney NSW
+Creating subtitute and write event for: West Ryde NSW
+Starting West Ryde NSW
+Finished activity log jobs: West Ryde NSW
+UI started on port 3002
+Creating subtitute and write event for: Sydney NSW
+Starting Sydney NSW
+../tree-removal/tree-removal-ryde.php
+../tree-pruning/tree-pruning-ryde.php
+../tree-lopping/tree-lopping-ryde.php
+../land-clearing/land-clearing-ryde.php
+https://en.wikipedia.org/wiki/Sydney,_New_South_Wales
+../contact.php
+Finished activity log jobs: Sydney NSW
+UI started on port 3002
+Creating subtitute and write event for: Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+../tree-removal/tree-removal-ryde.php
+../tree-removal/tree-removal-sydney.php
+../tree-pruning/tree-pruning-ryde.php
+../tree-pruning/tree-pruning-sydney.php
+../tree-lopping/tree-lopping-ryde.php
+../tree-lopping/tree-lopping-sydney.php
+../land-clearing/land-clearing-ryde.php
+../land-clearing/land-clearing-sydney.php
+https://en.wikipedia.org/wiki/Sydney,_New_South_Wales
+https://en.wikipedia.org/wiki/Sydney,_New_South_Wales
+../contact.php
+../contact.php
+Finished activity log jobs: Sydney NSW
+UI started on port 3002
+Creating subtitute and write event for: Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+../tree-removal/tree-removal-ryde.php
+../tree-removal/tree-removal-sydney.php
+../tree-pruning/tree-pruning-ryde.php
+../tree-pruning/tree-pruning-sydney.php
+../tree-lopping/tree-lopping-ryde.php
+../tree-lopping/tree-lopping-sydney.php
+../land-clearing/land-clearing-ryde.php
+../land-clearing/land-clearing-sydney.php
+https://en.wikipedia.org/wiki/Sydney,_New_South_Wales
+https://en.wikipedia.org/wiki/Sydney,_New_South_Wales
+../contact.php
+../contact.php
+Finished activity log jobs: Sydney NSW
+UI started on port 3002
+UI started on port 3002
+types [ 'activity_log' ]
+types [ 'activity_log' ]
+types [ 'activity_log' ]
+types [ 'activity_log' ]
+Starting Belrose NSW
+TypeError: Cannot read property 'toLowerCase' of undefined
+    at Promise (/Users/jugba/side-projects/fileapp/util/crawl.js:77:44)
+    at Promise (<anonymous>)
+    at Object.subvals (/Users/jugba/side-projects/fileapp/util/crawl.js:75:10)
+    at processed (/Users/jugba/side-projects/fileapp/taskmaager/worker.js:36:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:169:7)
+TypeError: Cannot read property 'toLowerCase' of undefined
+    at Promise (/Users/jugba/side-projects/fileapp/util/crawl.js:77:44)
+    at Promise (<anonymous>)
+    at Object.subvals (/Users/jugba/side-projects/fileapp/util/crawl.js:75:10)
+    at processed (/Users/jugba/side-projects/fileapp/taskmaager/worker.js:36:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:169:7)
+UI started on port 3002
+types [ 'activity_log' ]
+Creating subtitute and write event for: Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+types [ 'activity_log' ]
+Starting Sydney NSW
+Starting Sydney NSW
+types [ 'activity_log' ]
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+{ NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:169:7) name: 'NoSuchSessionError', remoteStacktrace: '' }
+{ NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:169:7) name: 'NoSuchSessionError', remoteStacktrace: '' }
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+{ NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:169:7) name: 'NoSuchSessionError', remoteStacktrace: '' }
+{ NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:169:7) name: 'NoSuchSessionError', remoteStacktrace: '' }
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Starting Sydney NSW
+Finished activity log jobs: Sydney NSW
+UI started on port 3002
+UI started on port 3002
+UI started on port 3002
+UI started on port 3002
+UI started on port 3002
+UI started on port 3002
+TypeError: redis.client(...).getK is not a function
+    at Function.exports.getAll (/Users/jugba/side-projects/fileapp/node_modules/kue/lib/queue/job.js:120:18)
+    at exports.getAll (/Users/jugba/side-projects/fileapp/node_modules/kue/lib/http/routes/json.js:246:8)
+    at Layer.handle [as handle_request] (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/route.js:137:13)
+    at /Users/jugba/side-projects/fileapp/node_modules/kue/lib/http/middleware/provides.js:11:36
+    at Layer.handle [as handle_request] (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/jugba/side-projects/fileapp/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/Users/jugba/side-projects/fileapp/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:115:13)
+    at SendStream.emit (events.js:210:7)
+    at SendStream.error (/Users/jugba/side-projects/fileapp/node_modules/send/index.js:270:17)
+TypeError: redis.client(...).getK is not a function
+    at Function.exports.getAll (/Users/jugba/side-projects/fileapp/node_modules/kue/lib/queue/job.js:120:18)
+    at exports.getAll (/Users/jugba/side-projects/fileapp/node_modules/kue/lib/http/routes/json.js:246:8)
+    at Layer.handle [as handle_request] (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/route.js:137:13)
+    at /Users/jugba/side-projects/fileapp/node_modules/kue/lib/http/middleware/provides.js:11:36
+    at Layer.handle [as handle_request] (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/jugba/side-projects/fileapp/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/jugba/side-projects/fileapp/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/Users/jugba/side-projects/fileapp/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:115:13)
+    at SendStream.emit (events.js:210:7)
+    at SendStream.error (/Users/jugba/side-projects/fileapp/node_modules/send/index.js:270:17)
+UI started on port 3002
+UI started on port 3002
+UI started on port 3002
+types []
+types []
+types []
+types []
+types []
+types []
+types []
+UI started on port 3002
+UI started on port 3002
+module.js:487
+    throw err;
+    ^
+
+Error: Cannot find module 'kue'
+    at Function.Module._resolveFilename (module.js:485:15)
+    at Function.Module._load (module.js:437:25)
+    at Module.require (module.js:513:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/jugba/side-projects/fileapp/taskmaager/taskRunner.js:1:75)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+module.js:487
+    throw err;
+    ^
+
+Error: Cannot find module 'kue'
+    at Function.Module._resolveFilename (module.js:485:15)
+    at Function.Module._load (module.js:437:25)
+    at Module.require (module.js:513:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/jugba/side-projects/fileapp/taskmaager/worker.js:1:75)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+UI started on port 3002
+UI started on port 3002
+UI started on port 3002
+UI started on port 3002
+UI started on port 3002
+UI started on port 3002
+Creating subtitute and write event for: Sydney NSW
+Starting Sydney NSW
+Finished activity log jobs: Sydney NSW
+module.js:487
+    throw err;
+    ^
+
+Error: Cannot find module 'kue'
+    at Function.Module._resolveFilename (module.js:485:15)
+    at Function.Module._load (module.js:437:25)
+    at Module.require (module.js:513:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/jugba/side-projects/fileapp/taskmaager/worker.js:1:75)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+module.js:487
+    throw err;
+    ^
+
+Error: Cannot find module 'kue'
+    at Function.Module._resolveFilename (module.js:485:15)
+    at Function.Module._load (module.js:437:25)
+    at Module.require (module.js:513:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/jugba/side-projects/fileapp/taskmaager/taskRunner.js:1:75)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+module.js:487
+    throw err;
+    ^
+
+Error: Cannot find module 'kue'
+    at Function.Module._resolveFilename (module.js:485:15)
+    at Function.Module._load (module.js:437:25)
+    at Module.require (module.js:513:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/jugba/side-projects/fileapp/taskmaager/taskRunner.js:1:75)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+module.js:487
+    throw err;
+    ^
+
+Error: Cannot find module 'kue'
+    at Function.Module._resolveFilename (module.js:485:15)
+    at Function.Module._load (module.js:437:25)
+    at Module.require (module.js:513:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/jugba/side-projects/fileapp/taskmaager/worker.js:1:75)
+    at Module._compile (module.js:569:30)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:503:32)
+    at tryModuleLoad (module.js:466:12)
+    at Function.Module._load (module.js:458:3)
+events.js:182
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object.exports._errnoException (util.js:1022:11)
+    at exports._exceptionWithHostPort (util.js:1045:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:14)
+UI started on port 3002
+events.js:182
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object.exports._errnoException (util.js:1022:11)
+    at exports._exceptionWithHostPort (util.js:1045:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:14)
+UI started on port 3002
+UI started on port 3002
+Error: Failed to lookup view "job/list" in views directory "/Users/jugba/side-projects/fileapp/node_modules/kue/lib/http/views"
+    at Function.render (/Users/jugba/side-projects/fileapp/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/Users/jugba/side-projects/fileapp/node_modules/express/lib/response.js:1008:7)
+    at Command.callback (/Users/jugba/side-projects/fileapp/node_modules/kue/lib/http/routes/index.js:22:11)
+    at normal_reply (/Users/jugba/side-projects/fileapp/node_modules/redis/index.js:721:21)
+    at RedisClient.return_reply (/Users/jugba/side-projects/fileapp/node_modules/redis/index.js:819:9)
+    at JavascriptRedisParser.returnReply (/Users/jugba/side-projects/fileapp/node_modules/redis/index.js:192:18)
+    at JavascriptRedisParser.execute (/Users/jugba/side-projects/fileapp/node_modules/redis-parser/lib/parser.js:574:12)
+    at Socket.<anonymous> (/Users/jugba/side-projects/fileapp/node_modules/redis/index.js:274:27)
+    at Socket.emit (events.js:180:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:578:20)
+UI started on port 3002

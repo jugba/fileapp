@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title FIle | Word
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='')
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+
+  body
+    .container
+      img.logo(src="images/logo.jpg", alt="logo")
+      nav
+        ul
+          li
+            a(href="/", target="_self") Home
+          li
+            a(href="/more", target="_self") More
+          li
+            a(href="/images", target="_self") Images     
+      block content
+      footer
+        p File Edit &copy; #{(new Date()).getUTCFullYear()}

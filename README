@@ -1,0 +1,9 @@
+install dependencies
+
+run: npm install
+
+To run app:  npm start
+start redis server
+> redis-server
+Start worker
+> 
