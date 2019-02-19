@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const fs = require('fs');
+const rimraf = require('rimraf')
+const archiver = require('archiver');
+const mkdirp = require('mkdirp');
+
 
 const crawl = require('../util/crawl');
 const ActivityLog = require('../models/activity_log');
@@ -31,6 +35,62 @@ router.get('/more', function(req,res, next){
 
 router.get('/image', (req, res)=> {
     res.render('image');
+})
+
+router.get('/downloads', (req, res) => {
+  // clear all old archives
+  rimraf('public/downloads/*.zip', (err)=>{
+    if(err) console.log(err)
+    let dir = __dirname.split("routes")
+    // then zip all assets images and files
+    let filename = `assets_${Date.now()}.zip`
+    let filePath = dir[0] + 'public/downloads/'+ filename
+    let output = fs.createWriteStream(filePath)
+    let archive = archiver('zip', {
+                            zlib: { level: 9 } 
+                  })
+    
+    output.on('close', function() {
+                    console.log(archive.pointer() + ' total bytes');
+                    console.log('archiver has been finalized and the output file descriptor has closed.');
+                    res.download(filePath);
+                  })
+                  
+    output.on('end', function() {
+                  console.log('Data has been drained');
+              })
+                  
+    archive.on('warning', function(err) {
+                    if (err.code === 'ENOENT') {
+                      // log warning
+                    } else {
+                      // throw error
+                      throw err;
+                    }
+                  })
+                  
+    archive.on('error', function(err) {
+                    throw err;
+                  })
+                  
+    archive.pipe(output)
+    console.log(dir[0] + 'output/*.php')            
+    //archive.glob('output/*.php')
+    archive.directory('output/', false)
+    archive.finalize().then(()=>{
+      rimraf('output/', (err) => {
+        if(err) console.log('Error purging Output dir', err)
+        console.log('Emptied Output dir!')
+        mkdirp('output/images', (err)=>{
+          if (err) console.log('Error recreating Output dir', err)
+          console.log('Done recreating dir')
+        })
+
+      })
+      
+    });
+   
+  })
 })
 
 router.post('/process_image', upload.single('fileupload'), (req, res) => {

@@ -17,12 +17,14 @@
   "author": "jugba",
   "license": "MIT",
   "dependencies": {
+    "archiver": "^3.0.0",
     "async": "^2.6.1",
     "body-parser": "^1.18.3",
     "cheerio": "^1.0.0-rc.2",
     "debug": "^4.0.1",
     "express": "^4.16.3",
     "kue": "git+https://github.com/andela-jugba/kue.git",
+    "mkdirp": "^0.5.1",
     "moment": "^2.22.2",
     "mongoose": "^5.3.2",
     "morgan": "^1.9.1",
@@ -31,6 +33,8 @@
     "phantomjs": "^2.1.7",
     "prettier": "^1.16.1",
     "pug": "^2.0.3",
+    "rimraf": "^2.6.3",
+    "selenium-chrome-proxy-plugin": "^0.2.2",
     "selenium-webdriver": "^4.0.0-alpha.1"
   }
 }

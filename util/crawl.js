@@ -3,70 +3,133 @@ const chrome = require('selenium-webdriver/chrome');
 const cheerio = require('cheerio');
 const async = require('async')
 const screen = {
-  width: 640,
-  height: 480
+  width: 1000,
+  height: 800
 };
+const fs = require('fs')
 
-
-process.on('unhandledRejection', r => console.log(r));
+process.on('unhandledRejection', r => console.log("unhandledRejections",r));
 
 let baseUrl = "https://www.google.com.au/maps/place/";
 let places = ["Putney NSW 2112"]
+let addr = '154.118.54.181:47992'
 
+let capabilities = {
+  'browserName' : 'Firefox',
+  'browser_version' : '56.0 beta',
+  'os' : 'OS X',
+  'os_version' : 'Sierra',
+  'resolution' : '1280x1024',
+  'browserstack.user' : 'joshuaugba1',
+  'browserstack.key' : 'BPgUs5oAcG82adRPvuZe',
+  'browserstack.debug' : 'true',
+  'build' : 'First build'
+}
 const crawl = (place) => {
   // const driver = new Builder()
   //     .forBrowser('chrome')
   //     .build();
   const driver = new Builder().forBrowser('chrome')
     .setChromeOptions(new chrome.Options()
+    .addArguments(`--proxy-server=http://${addr}`)
     .headless()
     .windowSize(screen))
     .build();
+  // const driver = new Builder().usingServer('http://hub-cloud.browserstack.com/wd/hub')
+  //   .withCapabilities(capabilities)
+  //   .build()
   driver.get(baseUrl + place).catch(e=>console.log("the main navigation failed!!"))
-  driver.sleep(1000);
+  driver.sleep(10000);
   return new Promise((resolve,reject)=> {
-    driver.findElement(By.xpath('//*[@id="pane"]/div/div[1]/div/div/div[2]/div[1]/button[2]')).
-    then((shareButton)=> {
-      shareButton.click();
-      driver.switchTo('')
+  driver.sleep(20000).then(() => { return driver.findElement(By.xpath('//*[@id="pane"]/div/div[1]/div/div/div[2]/div[1]/button[2]')).
+      then((shareButton)=> {
+        shareButton.click();
+        driver.switchTo('')
       // driver.wait(until.elementLocated(By.css('#modal-dialog-widget > div.modal-container > div > div.modal-dialog-content > div > div > div.section-listbox > div.section-tab-bar > button.section-tab-bar-tab.ripple-container.section-tab-bar-tab-unselected')),1000).
-        driver.sleep(2000).then(()=>{
+        driver.sleep(30000).then(()=>{
         driver.findElement(By.css('#modal-dialog-widget > div.modal-container > div > div.modal-dialog-content > div > div > div.section-listbox > div.section-tab-bar > button.section-tab-bar-tab.ripple-container.section-tab-bar-tab-unselected')).
-        then((embed)=>{
-          embed.click();
+          then((embed)=>{
+            embed.click();
 
-        }).then(()=>{
-          driver.findElement(By.tagName('body')).then(element=>{
-            element.getAttribute("outerHTML").then(html=>{
-              $ = cheerio.load(html);
-              $('input').each((i, elm)=>{
-                if (i == 0){
-                  if (elm.attribs.value.indexOf('iframe') == -1) reject(new Error("Iframe not found!"))
-                  $$ = cheerio.load(elm.attribs.value)
+          }).then(()=>{
+              driver.findElement(By.tagName('body')).then(element=>{
+                element.getAttribute("outerHTML").then(html=>{
+                  $ = cheerio.load(html);
+                  $('input').each((i, elm)=>{
+                    if (i == 0){
+                      if (elm.attribs.value.indexOf('iframe') == -1) reject(new Error("Iframe not found!"))
+                      $$ = cheerio.load(elm.attribs.value)
+                      driver.quit()
+                      resolve($$('iframe').attr('src'))
+                    }
+                    })
+                  }).catch((e)=>{
+                    console.log('Error-1', e)
+                    driver.takeScreenshot().then((data) =>{
+                    let base64Data = data.replace(/^data:image\/png;base64,/, "")
+                    fs.writeFile("screenshot-"+ Date.now()+ ".png", base64Data, 'base64', (err)=> {
+                                  if (err) console.log("Error Saving Image: ",err)
+                          })
+                      })
+                      driver.quit()
+                      reject(e)
+                  })
+                }).catch((e)=>{
+                  console.log('Error-2', e)
+                  driver.takeScreenshot().then((data) =>{
+                  let base64Data = data.replace(/^data:image\/png;base64,/, "")
+                  fs.writeFile("screenshot-"+ Date.now()+ ".png", base64Data, 'base64', (err)=> {
+                                if (err) console.log("Error Saving Image: ",err)
+                        })
+                    })
+                    driver.quit()
+                    reject(e)
+                  })
+              }).catch((e)=>{
+                console.log('Error-3', e)
+                driver.takeScreenshot().then((data) =>{
+                let base64Data = data.replace(/^data:image\/png;base64,/, "")
+                fs.writeFile("screenshot-"+ Date.now()+ ".png", base64Data, 'base64', (err)=> {
+                              if (err) console.log("Error Saving Image: ",err)
+                      })
+                  })
                   driver.quit()
-                  resolve($$('iframe').attr('src'))
-                }
-              })
-            }).catch((e)=>{
-              driver.quit()
-              reject(e)
+                  reject(e)
+                })
+        }).catch((e)=>{
+          console.log('Error-4', e)
+          driver.takeScreenshot().then((data) =>{
+          let base64Data = data.replace(/^data:image\/png;base64,/, "")
+          fs.writeFile("screenshot-"+ Date.now()+ ".png", base64Data, 'base64', (err)=> {
+                        if (err) console.log("Error Saving Image: ",err)
+                })
             })
-          }).catch((e)=>{
             driver.quit()
             reject(e)
           })
-        }).catch((e)=>{
-          driver.quit()
-          reject(e)
+        }).catch(e=>{
+          console.log("error-before save", e)
+            driver.takeScreenshot().then((data) =>{
+            let base64Data = data.replace(/^data:image\/png;base64,/, "")
+            fs.writeFile("screenshot-"+ Date.now()+ ".png", base64Data, 'base64', (err)=> {
+                          if (err) console.log("Error Saving Image: ",err)
+                  })
+              })
+            driver.quit()
+            reject(e)
+    })
+  }).catch( e => {
+      console.log('Failed to load first page', e)
+      driver.takeScreenshot().then((data) =>{
+      let base64Data = data.replace(/^data:image\/png;base64,/, "")
+      fs.writeFile("screenshot-"+ Date.now()+ ".png", base64Data, 'base64', (err)=> {
+                    if (err) console.log("Error Saving Image: ",err)
+            })
         })
-      }).catch((e)=>{
-        driver.quit()
-        reject(e)
-      })
-    }).catch(e=>{
       driver.quit()
       reject(e)
-    })
+  })
+
   })
 
 }
