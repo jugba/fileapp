@@ -13,6 +13,7 @@ process.on('unhandledRejection', r => console.log("unhandledRejections",r));
 let baseUrl = "https://www.google.com.au/maps/place/";
 let places = ["Putney NSW 2112"]
 let addr = '154.118.54.181:47992'
+addr = '196.17.217.23:61488'
 
 let capabilities = {
   'browserName' : 'Firefox',
@@ -25,10 +26,17 @@ let capabilities = {
   'browserstack.debug' : 'true',
   'build' : 'First build'
 }
-const crawl = (place) => {
+const crawl = (data) => {
+  if(data.body.indexOf('https://www.google.com/maps') == -1) {
+    
+    return new Promise((resolve, reject)=>{
+      resolve('no-maps!');
+    })
+  }
   // const driver = new Builder()
   //     .forBrowser('chrome')
   //     .build();
+  let place = data.replacement;
   const driver = new Builder().forBrowser('chrome')
     .setChromeOptions(new chrome.Options()
     .addArguments(`--proxy-server=http://${addr}`)
@@ -143,14 +151,29 @@ const subvals = (data, subval) =>{
       let href = elm.attribs.href
       elm.attribs.href = href.replace(re2,replacement.toLowerCase().split(' ').join('-'))
     })
+    $('div').each((i, elm) => {
+      try {
+        let id =  elm.attribs.id
+        elm.attribs.id = id.replace(re2, replacement.toLowerCase().split(' ').join('-'))
+        console.log(elm.attribs)
+      } catch (error) {
+        
+      }
+      
+    })
     $('iframe').each((i, elm) => {
-      elm.attribs.src = subval;
-      let outText = $.html();
-      let re = new RegExp('!--',"g");
-      let re1 = new RegExp('--', "g");
-      outText = outText.replace(re, '');
-      outText = outText.replace(re1, '');
-      resolve(outText);
+      if(elm.attribs.src.indexOf('https://www.google.com/maps') > -1) elm.attribs.src = subval;
+      // let outText = $.html();
+      
+      //resolve(outText);
+    })
+    $('a').each((i, elm) => {
+      let text = $.html()
+      let re = new RegExp('!--\\?',"g");
+      let re1 = new RegExp('\\?--', "g");
+      text = text.replace(re, '?');
+      text = text.replace(re1, '?');
+      resolve(text)
     })
   })
 }

@@ -120,7 +120,7 @@ router.post('/process_image', upload.single('fileupload'), (req, res) => {
           newFilename =  newFilename.toLowerCase()
           console.log("Creating copy for: ", element)
           console.log("New File Name: ", newFilename)
-          fs.writeFile('output/images/' + newFilename, data, function(err){
+          fs.writeFile('output/' + newFilename, data, function(err){
             if (err){
               console.log("Error in writting to file")
             }

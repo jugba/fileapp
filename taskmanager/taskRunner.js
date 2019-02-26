@@ -15,7 +15,7 @@ setInterval(()=>{
         body: event.body,
         url: event.url,
         id: event.id
-      }).removeOnComplete( true ).priority('high').attempts(6).save()
+      }).priority('high').attempts(6).save()
       event.status = 'added'
       event.save()
     })

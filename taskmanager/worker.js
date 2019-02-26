@@ -31,7 +31,7 @@ const subString = (data,done, newtext) => {
     }
   })
 }
-const processed = (data,crawl, done,src) => {
+const processed = (data, crawl, done,src) => {
   if(typeof src === 'string'){
     crawl.subvals(data, src)
       .then(subString.bind(null, data, done))
@@ -54,7 +54,7 @@ if (cluster.isMaster) {
   jobs.process('activity_log', 1, (job, done)=>{
     console.log('Starting ' + job.data.replacement);
 
-    crawl.crawl(job.data.replacement)
+    crawl.crawl(job.data)
             .then(processed.bind(null, job.data, crawl, done))
             .catch(failed.bind(null, done))
   });
