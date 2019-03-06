@@ -21,6 +21,7 @@
     "async": "^2.6.1",
     "body-parser": "^1.18.3",
     "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "^1.4.4",
     "debug": "^4.0.1",
     "express": "^4.16.3",
     "kue": "git+https://github.com/andela-jugba/kue.git",

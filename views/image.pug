@@ -3,7 +3,7 @@ extends layout
 block content
   h2.page-header Upload Image and Word to replace!
   p Please add using the form below
-  form(method="post", action="/process_image" , enctype='multipart/form-data')
+  form#upload(method="post", action="/process_image" , enctype='multipart/form-data')
     .form-group
       label Word to replace:
       input.form-control(type="text", placeholder="Enter word to replace", name="word")
@@ -12,5 +12,7 @@ block content
       textarea.form-control(name="replacement", cols="30", rows="10")
     .form-group
       label File 
-      input.form-control(type="file", name="fileupload")
-    input.btn.btn-primary(type="submit", name='submit', value='save')
+      input.form-control#files(type="file", name="fileupload" multiple)
+    input.btn.btn-primary#submit(type="submit", name='submit', value='save')
+    if download
+      a(data-auto-download href=`/downloads/${download}`)
