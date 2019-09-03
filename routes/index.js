@@ -99,7 +99,9 @@ router.get('/downloads', (req, res) => {
 })
 
 router.post('/process_image', upload.array('fileupload'), (req, res) => {
-  const wordToReplace = req.body.word
+  let wordToReplace = req.body.word
+  wordToReplace = wordToReplace.toLowerCase()
+  wordToReplace = wordToReplace.split(' ').join('-');
   let replacementsText = req.body.replacement
   let replacements = replacementsText.split('\r\n')
   

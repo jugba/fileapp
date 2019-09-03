@@ -1,4 +1,4 @@
-const { Builder, By, until} =  require('selenium-webdriver');
+const { Builder, By, until, Key} =  require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const cheerio = require('cheerio');
 const async = require('async')
@@ -26,6 +26,70 @@ let capabilities = {
   'browserstack.debug' : 'true',
   'build' : 'First build'
 }
+
+const login = (driver) => {
+  driver.findElement(By.xpath('//*[@id="searchboxinput"]'))
+    .sendKeys()
+}
+
+const clickEmbedded = (driver) => {
+  return new Promise((resolve, reject) => {
+    driver.findElement(By.css('#modal-dialog-widget > div.modal-container > div > div.modal-dialog-content > div > div > div.section-listbox > div.section-tab-bar > button.section-tab-bar-tab.ripple-container.section-tab-bar-tab-unselected'))
+        .then(btn=>{
+          btn.click()
+          resolve('Done')
+        }
+         ).catch(err => {
+            driver.quit()
+            reject(err) 
+          })
+  })
+
+}
+const get = (data)=>{
+  if(data.body.indexOf('https://www.google.com/maps') == -1) {
+    
+    return new Promise((resolve, reject)=>{
+      resolve('no-maps!');
+    })
+  }
+
+  return new Promise( (resolve, reject)=>{
+  let  driver =  new Builder().forBrowser('chrome').setChromeOptions(new 
+        chrome.Options()
+        // .headless()
+        ).build()
+  driver.get(baseUrl).then(()=> {
+      driver.findElement(By.xpath('//*[@id="searchboxinput"]')).then(ele=>{
+        ele.sendKeys(data.replacement+ Key.ENTER )
+      })
+    })
+  driver.sleep(10000).then(
+          ()=> driver.findElement(By.xpath('//*[@id="pane"]/div/div[1]/div/div/div[4]/div[5]/div/button')).then(btn => btn.click()).catch(err=>{
+            driver.quit()
+            reject(new Error('No button to click'))
+          })
+      ).then( () =>
+            driver.sleep(5000).then(()=> clickEmbedded(driver).then(()=>{
+              driver.sleep(500).then(() => {
+                driver.findElement(By.xpath('//*[@id="modal-dialog-widget"]/div[2]/div/div[3]/div/div/div/div[3]/div[1]/input')).then(
+                  btn =>btn.getAttribute('value').then(val => {
+                    $ =  cheerio.load(val)
+                    elm = $('iframe')
+                    driver.quit()
+                    resolve(elm.attr().src)
+                  })).catch(err=> {
+                    driver.quit()
+                    reject(new Error('Element not found'))
+                  })
+                }
+                ).catch(err=> { driver.quit(); reject(new Error('Error with modal'))})
+      }))
+
+  )
+  })
+}
+
 const crawl = (data) => {
   if(data.body.indexOf('https://www.google.com/maps') == -1) {
     
@@ -39,8 +103,8 @@ const crawl = (data) => {
   let place = data.replacement;
   const driver = new Builder().forBrowser('chrome')
     .setChromeOptions(new chrome.Options()
-    .addArguments(`--proxy-server=http://${addr}`)
-    .headless()
+    //.addArguments(`--proxy-server=http://${addr}`)
+    //.headless()
     .windowSize(screen))
     .build();
   // const driver = new Builder().usingServer('http://hub-cloud.browserstack.com/wd/hub')
@@ -49,29 +113,53 @@ const crawl = (data) => {
   driver.get(baseUrl + place).catch(e=>console.log("the main navigation failed!!"))
   driver.sleep(10000);
   return new Promise((resolve,reject)=> {
-  driver.sleep(20000).then(() => { return driver.findElement(By.xpath('//*[@id="pane"]/div/div[1]/div/div/div[2]/div[1]/button[2]')).
+  driver.sleep(20000).then(() => { return driver.findElement(By.xpath('//*[@id="pane"]/div/div[1]/div/div/div[4]/div[5]/div/button')).
       then((shareButton)=> {
         shareButton.click();
-        driver.switchTo('')
+        //driver.switchTo('')
       // driver.wait(until.elementLocated(By.css('#modal-dialog-widget > div.modal-container > div > div.modal-dialog-content > div > div > div.section-listbox > div.section-tab-bar > button.section-tab-bar-tab.ripple-container.section-tab-bar-tab-unselected')),1000).
         driver.sleep(30000).then(()=>{
         driver.findElement(By.css('#modal-dialog-widget > div.modal-container > div > div.modal-dialog-content > div > div > div.section-listbox > div.section-tab-bar > button.section-tab-bar-tab.ripple-container.section-tab-bar-tab-unselected')).
           then((embed)=>{
             embed.click();
+            // driver.sleep(2000).then(
+            //   () =>{
+            //     driver.findElement(By.xpath('//*[@id="modal-dialog-widget"]/div[2]/div/div[3]/div/div/div/div[3]/div[1]/input'))
+            //       .then(element=>{
+  
+                    
+            //         if(element){
+            //           element.getAttribute('value').then(val=>{
+            //             resolve(val)
+            //             driver.quit()
+            //           })
+            //           resolve(element)
+            //         }else{
+            //           reject(new Error("Iframe not found!"))
+            //           driver.quit()
+            //         }
+            //       })
+            //   }
+            // );
 
-          }).then(()=>{
-              driver.findElement(By.tagName('body')).then(element=>{
+          }).then(
+          
+
+            ()=>{
+              driver.findElement(By.xpath('//*[@id="modal-dialog-widget"]/div[2]/div/div[3]/div/div/div/div[3]/div[1]/input')).then(element=>{
                 element.getAttribute("outerHTML").then(html=>{
-                  $ = cheerio.load(html);
-                  $('input').each((i, elm)=>{
-                    if (i == 0){
-                      if (elm.attribs.value.indexOf('iframe') == -1) reject(new Error("Iframe not found!"))
-                      $$ = cheerio.load(elm.attribs.value)
-                      driver.quit()
-                      resolve($$('iframe').attr('src'))
-                    }
-                    })
-                  }).catch((e)=>{
+                  console.log(html)
+                  // $ = cheerio.load(html);
+                  // $('input').each((i, elm)=>{
+                  //   if (i == 0){
+                  //     if (elm.attribs.value.indexOf('iframe') == -1) reject(new Error("Iframe not found!"))
+                  //     $$ = cheerio.load(elm.attribs.value)
+                  //     driver.quit()
+                  //     resolve($$('iframe').attr('src'))
+                  //   }
+                  //   })
+                  // 
+                }).catch((e)=>{
                     console.log('Error-1', e)
                     driver.takeScreenshot().then((data) =>{
                     let base64Data = data.replace(/^data:image\/png;base64,/, "")
@@ -93,7 +181,9 @@ const crawl = (data) => {
                     driver.quit()
                     reject(e)
                   })
-              }).catch((e)=>{
+              }
+              
+              ).catch((e)=>{
                 console.log('Error-3', e)
                 driver.takeScreenshot().then((data) =>{
                 let base64Data = data.replace(/^data:image\/png;base64,/, "")
@@ -188,7 +278,9 @@ const callSub = (elem) => {
     crawl(elem).then(callAgain.bind(elem,resolve)).catch(callSub.bind(null,elem))
   })
 }
-  
+
+data = {body: "https://www.google.com/maps", replacement: "Inner West NSW"}
+get(data).then(result=>console.log(result));
 module.exports = {}
 module.exports.subvals = subvals;
 module.exports.crawl = crawl;
