@@ -6,7 +6,7 @@ const rimraf = require('rimraf')
 const archiver = require('archiver');
 const mkdirp = require('mkdirp');
 const async = require('async')
-
+const cheerio = require('cheerio')
 
 
 const crawl = require('../util/crawl');
@@ -205,23 +205,49 @@ router.post('/extract', upload.single('fileupload'), function(req, res,next){
 
 router.post('/upload', upload.single('fileupload'), function(req, res, next) {
   const wordToReplace = req.body.word;
-  let replacements = req.body.replacement;
+  let replacementsText = req.body.replacement;
+  let replacements =  replacementsText.split('\r\n');
   let filename='';
+
   if(req.file) {
     console.log('uploading File...');
     filename = req.file.filename;
     let dir = __dirname.split("routes")
-    let re = new RegExp(wordToReplace,"g");
+    let re = new RegExp(wordToReplace, "g");
     console.log(dir);
     fs.readFile(dir[0] + 'public/uploads/'+ filename, function(err, data){
       if(err){
         console.log(err)
       }else{
-        replacements = replacements.split(',');
         for (let index = 0; index < replacements.length; index++) {
           const element = replacements[index];
           let newtext =  data.toString().replace(re, element)
-          let re2 = new RegExp(wordToReplace.toLowerCase(),"g")
+          let r = new RegExp(wordToReplace.toLowerCase(), "g");
+          $ = cheerio.load(newtext)
+          $('a').each((i, elm) => {
+            let href = elm.attribs.href
+            elm.attribs.href = href.replace(r, element.toLowerCase().split(' ').join('-'))
+          })
+          $('div').each((i, elm) => {
+            try{
+              let id = elm.attribs.id
+              elm.attribs.id = id.replace(r, element.toLowerCase().split(' ').join('-'))
+            } catch (error){
+
+            }
+          })
+          $('a').each((i, elm) => {
+            if (i > 0) return
+            let text = $.html()
+            let re = new RegExp('!--\\?', "g")
+            let re1 = new RegExp('\\?--', "g")
+            text = text.replace(re, '?')
+            text = text.replace(re1, '?')
+            newtext = text
+            console.log(i, 'index')
+  
+          })
+          let re2 = new RegExp(wordToReplace.toLowerCase(), "g")
           let newFilename = filename.replace(re2,element.toLowerCase())
           console.log("Creating copy for: ", element)
           fs.writeFile('output/'+newFilename, newtext, function(err){

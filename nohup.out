@@ -5,3 +5,220 @@ UI started on port 3002
 UI started on port 3002
 UI started on port 3002
 UI started on port 3002
+UI started on port 3002
+Error: No button to click
+    at /Users/jugba/side-projects/fileapp/util/crawl.js:70:20
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+unhandledRejections Error: No button to click
+    at /Users/jugba/side-projects/fileapp/util/crawl.js:70:20
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+    at async thenableWebDriverProxy.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:696:17) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+    at async thenableWebDriverProxy.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:696:17) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+Error: No button to click
+    at /Users/jugba/side-projects/fileapp/util/crawl.js:70:20
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+unhandledRejections Error: No button to click
+    at /Users/jugba/side-projects/fileapp/util/crawl.js:70:20
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+Error: No button to click
+    at /Users/jugba/side-projects/fileapp/util/crawl.js:70:20
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+unhandledRejections Error: No button to click
+    at /Users/jugba/side-projects/fileapp/util/crawl.js:70:20
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+    at async thenableWebDriverProxy.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:696:17) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+    at async thenableWebDriverProxy.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:696:17) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+    at async thenableWebDriverProxy.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:696:17) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+    at async thenableWebDriverProxy.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:696:17) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+Error: No button to click
+    at /Users/jugba/side-projects/fileapp/util/crawl.js:70:20
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+unhandledRejections Error: No button to click
+    at /Users/jugba/side-projects/fileapp/util/crawl.js:70:20
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+    at async thenableWebDriverProxy.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:696:17) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: invalid session id
+  (Driver info: chromedriver=2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform=Mac OS X 10.13.4 x86_64)
+    at Object.checkLegacyResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:533:13)
+    at Executor.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/http.js:468:26)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+    at async thenableWebDriverProxy.execute (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:696:17) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}
+unhandledRejections NoSuchSessionError: This driver instance does not have a valid session ID (did you call WebDriver.quit()?) and may no longer be used.
+    at /Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/webdriver.js:726:38
+    at Object.thenFinally [as finally] (/Users/jugba/side-projects/fileapp/node_modules/selenium-webdriver/lib/promise.js:124:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5) {
+  name: 'NoSuchSessionError',
+  remoteStacktrace: ''
+}

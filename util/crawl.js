@@ -280,7 +280,7 @@ const callSub = (elem) => {
 }
 
 data = {body: "https://www.google.com/maps", replacement: "Inner West NSW"}
-get(data).then(result=>console.log(result));
+// get(data).then(result=>console.log(result));
 module.exports = {}
 module.exports.subvals = subvals;
 module.exports.crawl = crawl;
