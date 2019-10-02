@@ -228,6 +228,10 @@ router.post('/upload', upload.single('fileupload'), function(req, res, next) {
             let href = elm.attribs.href
             elm.attribs.href = href.replace(r, element.toLowerCase().split(' ').join('-'))
           })
+          $('img').each((i, elm) => {
+            let src = elm.attribs.src
+            elm.attribs.src = src.replace(r, element.toLowerCase().split(' ').join('-'))
+          })
           $('div').each((i, elm) => {
             try{
               let id = elm.attribs.id
@@ -248,7 +252,7 @@ router.post('/upload', upload.single('fileupload'), function(req, res, next) {
   
           })
           let re2 = new RegExp(wordToReplace.toLowerCase(), "g")
-          let newFilename = filename.replace(re2,element.toLowerCase())
+          let newFilename = filename.replace(re2,element.toLowerCase().split(' ').join('-'))
           console.log("Creating copy for: ", element)
           fs.writeFile('output/'+newFilename, newtext, function(err){
             if(err){
