@@ -224,18 +224,19 @@ router.post('/upload', upload.single('fileupload'), function(req, res, next) {
           let newtext =  data.toString().replace(re, element)
           let r = new RegExp(wordToReplace.toLowerCase(), "g");
           $ = cheerio.load(newtext)
+          console.log($)
           $('a').each((i, elm) => {
             let href = elm.attribs.href
-            elm.attribs.href = href.replace(r, element.toLowerCase().split(' ').join('-'))
+            if(href) elm.attribs.href = href.replace(r, element.toLowerCase().split(' ').join('-'))
           })
           $('img').each((i, elm) => {
             let src = elm.attribs.src
-            elm.attribs.src = src.replace(r, element.toLowerCase().split(' ').join('-'))
+            if(src) elm.attribs.src = src.replace(r, element.toLowerCase().split(' ').join('-'))
           })
           $('div').each((i, elm) => {
             try{
               let id = elm.attribs.id
-              elm.attribs.id = id.replace(r, element.toLowerCase().split(' ').join('-'))
+              if (id)elm.attribs.id = id.replace(r, element.toLowerCase().split(' ').join('-'))
             } catch (error){
 
             }
