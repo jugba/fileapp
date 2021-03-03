@@ -33,7 +33,7 @@
     "nodemon": "^1.18.4",
     "phantomjs": "^2.1.7",
     "prettier": "^1.16.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "rimraf": "^2.6.3",
     "selenium-chrome-proxy-plugin": "^0.2.2",
     "selenium-webdriver": "^4.0.0-alpha.1"
