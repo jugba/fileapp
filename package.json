@@ -26,7 +26,7 @@
     "express": "^4.16.3",
     "kue": "git+https://github.com/jugba/kue.git",
     "mkdirp": "^0.5.1",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "mongoose": "^5.3.2",
     "morgan": "^1.9.1",
     "multer": "^1.4.0",
