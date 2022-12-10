@@ -23,7 +23,7 @@
     "cheerio": "^1.0.0-rc.2",
     "cookie-parser": "^1.4.4",
     "debug": "^4.0.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "kue": "git+https://github.com/jugba/kue.git",
     "mkdirp": "^0.5.1",
     "moment": "^2.22.2",
